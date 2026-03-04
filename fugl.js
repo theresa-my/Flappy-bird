@@ -1,38 +1,36 @@
-function setup() 
-
+function FuglSetup()
 {
-  createCanvas(400, 400);
-  y=200
-  havejustpressed = false
-
+   x = 100
+   y = 100
+   fart = 1.5
+   havejustpressed = false
 }
 
-function draw() 
+function FuglDraw()
 {
-  background(220);
-  
-  circle(200,y,20)
+  circle(x, y, 10);
   
   
-  if (keyIsDown(' '.charCodeAt(0))) 
-    {
-  
+  if (keyIsPressed==true) 
+  {
     if (havejustpressed == false )
-      {
-    
-      y-=20
+    {
       
-   
-      }
+       fart = -3
     }
+  }
+ 
   havejustpressed = false
   
-  if (keyIsDown(' '.charCodeAt(0)))
-    {
+  if (keyIsPressed==true)
+  {
     havejustpressed = true
-  
-    }
-  
-  
-  
+  }
+    y += fart
+    
+     if (fart < 4)
+      {
+        fart = fart + 0.1
+      }
+    
 }
