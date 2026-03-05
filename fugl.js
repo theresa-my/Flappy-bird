@@ -11,7 +11,7 @@ function FuglSetup()
 
 function FuglDraw()
 {
-  
+
   image(fuglImg, x - 50, y - 30, 110, 65);
 
   if (keyIsPressed==true) 
