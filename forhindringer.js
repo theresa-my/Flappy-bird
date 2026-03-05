@@ -7,7 +7,8 @@ class Square {
 		this.y = random(200, height);
 		this.width = 60;  
         this.height = 1000;  
-		this.speed = 3;          
+		this.speed = 3;   
+		this.hul = 150;       
 	}
 
 	// move the square leftwards
@@ -20,7 +21,7 @@ class Square {
 		fill(58, 179, 21);
 		noStroke();
 		rect(this.x, this.y, this.width, this.height);
-        rect(this.x, this.y - this.height - 150, this.width, this.height);
+        rect(this.x, this.y - this.height - this.hul, this.width, this.height);
 	}
 
 	

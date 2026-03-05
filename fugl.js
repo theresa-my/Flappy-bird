@@ -3,12 +3,13 @@ function FuglSetup()
    x = 100
    y = 100
    fart = 1.5
+   r = 10
    havejustpressed = false
 }
 
 function FuglDraw()
 {
-  circle(x, y, 10);
+  circle(x, y, r);
   
   
   if (keyIsPressed==true) 
