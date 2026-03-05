@@ -1,12 +1,19 @@
 
 let fuglImg;
 
+/*
 function preload()
 {
-  fuglImg = loadImage(fugl.jpg);
+  console.log("Loader billede fra: fugl.jpg");
+  fuglImg = loadImage('fugl.jpg', 
+    function() { console.log("✓ Billede loaded!"); },
+    function() { console.log("✗ FEJL ved loading!"); }
+  );
 }
+*/
 
-function setup() {
+async function setup() {
+    fuglImg = await loadImage('fugl.png')
     createCanvas(800, 600);
     squares = [];
     spawnInterval = 150;
