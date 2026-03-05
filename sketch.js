@@ -5,12 +5,23 @@ function setup() {
     squares = [];
     spawnInterval = 150;
     FuglSetup();
+    gameon = true;
 }
 
 function draw() 
 {
-    background(220);
+  
+    if(keyIsPressed==true && gameon == false)
+    {
+        gameon = true;
+        squares = [];
+        spawnInterval = 150;
+        FuglSetup();
+    }
 
+    if (gameon == true)
+    {
+    background(220);
     //nye forhindringer
     spawnInterval--;
     if (spawnInterval == 0) 
@@ -36,15 +47,18 @@ function draw()
         {
             if (y + r > squares[i].y || y - r < squares[i].y - squares[i].hul)
             {
-                text("HEEEEJ", 200, 100);
-                rect(200, 150, 400, 300);
+                gameon = false; 
+                textSize(60);
+                fill(255, 0, 0);
+                textAlign(CENTER, CENTER);
+                text("Game Over", width / 2, height / 2);
             }
             
         }
     }
 
     FuglDraw();
-
+    }
 }
 
 
