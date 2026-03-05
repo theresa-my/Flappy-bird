@@ -1,5 +1,6 @@
 
 let fuglImg;
+let point = 0; // point score
 
 async function setup() {
     fuglImg = await loadImage('fugl.png')
@@ -17,6 +18,7 @@ function draw()
     if(keyIsPressed==true && gameon == false)
     {
         gameon = true;
+        point = 0; // reset point
         squares = [];
         spawnInterval = 150;
         FuglSetup();
@@ -32,15 +34,16 @@ function draw()
       {
           if (x > squares[i].x + squares[i].width && !squares[i].passed)
           {
-            //point += 1;;
+            point += 1;
             squares[i].passed = true; // markér forhindringen som passeret
           }
       }
+      push()
       fill(0);
       textSize(13);
       text("Point: ", 10, 30);
       text(point, 70, 30);
-
+      pop()
 
 
       //nye forhindringer
@@ -69,10 +72,12 @@ function draw()
             if (y + r > squares[i].y || y - r < squares[i].y - squares[i].hul)
             {
                 gameon = false; 
+                push()
                 textSize(60);
                 fill(255, 0, 0);
                 textAlign(CENTER, CENTER);
                 text("Game Over", width / 2, height / 2);
+                pop()
             }
             
         }
