@@ -13,9 +13,7 @@ function FuglDraw()
 {
   
   image(fuglImg, x - 50, y - 30, 110, 65);
-  circle(x,y,r)
-  
-  
+
   if (keyIsPressed==true) 
   {
     if (havejustpressed == false )
