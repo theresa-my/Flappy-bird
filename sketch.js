@@ -34,10 +34,11 @@ function draw()
        
        if (x + r > squares[i].x && x - r < squares[i].x + squares[i].width)
         {
-           
-            if (y + r > spuares[i].y && y - r < squares[i].y - squares[i].hul)
+           rect(200, 150, 400, 300);
+            if (y + r > squares[i].y && y - r < squares[i].y - squares[i].hul)
             {
-                text("HEEEEJ", 100, 100);
+                text("HEEEEJ", 200, 100);
+                rect(200, 150, 400, 300);
             }
             
         }
