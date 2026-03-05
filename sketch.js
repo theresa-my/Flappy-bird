@@ -1,4 +1,10 @@
 
+let fuglImg;
+
+function preload()
+{
+  fuglImg = loadImage(fugl.jpg);
+}
 
 function setup() {
     createCanvas(800, 600);

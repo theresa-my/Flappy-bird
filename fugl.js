@@ -1,3 +1,4 @@
+
 function FuglSetup()
 {
    x = 100
@@ -5,10 +6,14 @@ function FuglSetup()
    fart = 1.5
    r = 10
    havejustpressed = false
+
 }
 
 function FuglDraw()
 {
+  if (fuglImg) {
+    image(fuglImg, x, y, r, r);
+  }
   circle(x, y, r);
   
   
