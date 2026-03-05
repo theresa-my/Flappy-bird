@@ -30,13 +30,16 @@ function draw()
             squares.splice(i, 1);
         }
 
-
-        if (x - r > squares[i].x + squares[i].width && x + r > squares[i].x)
+       //tjek for kollision
+       
+       if (x + r > squares[i].x && x - r < squares[i].x + squares[i].width)
         {
-           if (y + r > spuares[i].y && y - r < squares[i].y - squares[i].hul)
-           {
+           
+            if (y + r > spuares[i].y && y - r < squares[i].y - squares[i].hul)
+            {
                 text("HEEEEJ", 100, 100);
-           }
+            }
+            
         }
     }
 
