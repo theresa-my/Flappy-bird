@@ -8,6 +8,7 @@ async function setup() {
     spawnInterval = 150;
     FuglSetup();
     gameon = true;
+
 }
 
 function draw() 
@@ -19,11 +20,29 @@ function draw()
         squares = [];
         spawnInterval = 150;
         FuglSetup();
+ 
     }
 
     if (gameon == true)
     {
     background(220);
+
+    //point score
+    for (let i = 0; i < squares.length; i++)
+    {
+        if (x > squares[i].x + squares[i].width && !squares[i].passed)
+        {
+            //point += 1;;
+            squares[i].passed = true; // markér forhindringen som passeret
+        }
+    }
+    fill(0);
+    textSize(13);
+    text("Point: ", 10, 30);
+    text(point, 70, 30);
+
+
+
     //nye forhindringer
     spawnInterval--;
     if (spawnInterval == 0) 
