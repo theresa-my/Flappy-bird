@@ -1,17 +1,6 @@
 
 let fuglImg;
 
-/*
-function preload()
-{
-  console.log("Loader billede fra: fugl.jpg");
-  fuglImg = loadImage('fugl.jpg', 
-    function() { console.log("✓ Billede loaded!"); },
-    function() { console.log("✗ FEJL ved loading!"); }
-  );
-}
-*/
-
 async function setup() {
     fuglImg = await loadImage('fugl.png')
     createCanvas(800, 600);

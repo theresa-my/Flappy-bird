@@ -4,7 +4,7 @@ function FuglSetup()
    x = 100
    y = 100
    fart = 1.5
-   r = 30
+   r = 35
    havejustpressed = false
 
 }
@@ -12,8 +12,8 @@ function FuglSetup()
 function FuglDraw()
 {
   
-  image(fuglImg, x, y, 100, 100);
-
+  image(fuglImg, x - 50, y - 45, 110, 80);
+  circle(x,y,r)
   
   
   if (keyIsPressed==true) 
