@@ -25,35 +25,35 @@ function draw()
 
     if (gameon == true)
     {
-    background(220);
+      background(220);
 
     //point score
-    for (let i = 0; i < squares.length; i++)
-    {
-        if (x > squares[i].x + squares[i].width && !squares[i].passed)
-        {
+      for (let i = 0; i < squares.length; i++)
+      {
+          if (x > squares[i].x + squares[i].width && !squares[i].passed)
+          {
             //point += 1;;
             squares[i].passed = true; // markér forhindringen som passeret
-        }
-    }
-    fill(0);
-    textSize(13);
-    text("Point: ", 10, 30);
-    text(point, 70, 30);
+          }
+      }
+      fill(0);
+      textSize(13);
+      text("Point: ", 10, 30);
+      text(point, 70, 30);
 
 
 
-    //nye forhindringer
-    spawnInterval--;
-    if (spawnInterval == 0) 
-    {
+      //nye forhindringer
+      spawnInterval--;
+      if (spawnInterval == 0) 
+      {
         squares.push(new Square());
         spawnInterval = 150;
-    }
+      }
 
-    // update forhindringer
-    for (let i = squares.length - 1; i >= 0; i--) 
-    {
+      // update forhindringer
+      for (let i = squares.length - 1; i >= 0; i--) 
+      {
         squares[i].update();
         squares[i].show();
         // fjern forhindringer der er uden for skærmen
@@ -76,7 +76,7 @@ function draw()
             }
             
         }
-    }
+     }
 
     FuglDraw();
     }
